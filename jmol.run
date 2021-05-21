@@ -1,0 +1,32 @@
+load 'movie.xyz' {1 1 1} unitcell {  13 13 13  90.00  90.00  90.00} 
+set PerspectiveDepth false
+select all; set measure angstroms
+cpk off
+set autobond false;
+boundbox on
+connect 0.91 (_H) (_H)
+ connect 1.88 (_H) (_Si)
+ connect 1.36 (_H) (_O)
+ connect 1.65 (_H) (_Na)
+ connect 1.88 (_Si) (_H)
+ connect 2.85 (_Si) (_Si)
+ connect 2.33 (_Si) (_O)
+ connect 2.62 (_Si) (_Na)
+ connect 1.36 (_O) (_H)
+ connect 2.33 (_O) (_Si)
+ connect 1.81 (_O) (_O)
+ connect 2.1 (_O) (_Na)
+ connect 1.65 (_Na) (_H)
+ connect 2.62 (_Na) (_Si)
+ connect 2.1 (_Na) (_O)
+ connect 2.39 (_Na) (_Na)
+  
+connect 1.5 2.5 (_O) (_H) hbond
+wireframe 0.2
+hbonds 0.01
+color hbonds yellow
+cpk 25%
+
+#select atomno = 1
+#cpk 50%
+#color blue
